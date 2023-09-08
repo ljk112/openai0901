@@ -19,6 +19,7 @@ from first import views
 
 urlpatterns = [
     path('go/',views.go),
+    path('go2/',views.go2),
     path('gogo/',views.gogo),
 
 ]
