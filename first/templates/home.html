@@ -1,27 +1,441 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-
 <head>
     <meta charset="UTF-8">
-    <title>HTML Intro</title>
-</head>
+    <title>검사 항목 평가</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e0ffe0; /* 연두색 계통 배경색 */
+        }
 
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #004d00; /* 연두색 계통 텍스트 색상 */
+        }
+
+        fieldset {
+            border: 2px solid #008000; /* 연두색 계통 fieldset 테두리 색상 */
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            color: #008000; /* 연두색 계통 legend 텍스트 색상 */
+            font-weight: bold;
+        }
+
+
+        label {
+            display: inline-block; /* 가로로 정렬되도록 변경 */
+            margin-right: 10px; /* 항목 간격 조정 */
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #008000; /* 연두색 계통 버튼 배경색 */
+            border: none;
+            color: #ffffff; /* 버튼 텍스트 색상 */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d00; /* 연두색 계통 버튼 호버 배경색 */
+        }
+        
+    </style>
+</head>
 
 <body>
 
-    <form action="/gogo" method="get">
-        직업 : <input type="text" name="job" maxlength="30">
-        <br/>
-        나이 : <input type="text" name="age" maxlength="3">
-        <br/>
-        성별 : <input type="text" name="sex" maxlength="10">
-        <br/>
-        <button>보내기</button>
-    </form>
+    <div class="container">
+        <h1>검사 항목 평가</h1>
+        <form action="/gogo" method="get">
+            <fieldset>
+                <legend>항목 1</legend>
+                <p>새로운 사람들과의 만남을 통해 에너지를 얻는 편인가요?</p>
+                <label><input type="radio" name="sec1" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec1" value="4"> 동의</label>
+                <label><input type="radio" name="sec1" value="3"> 중립</label>
+                <label><input type="radio" name="sec1" value="2"> 비동의</label>
+                <label><input type="radio" name="sec1" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 2</legend>
+                <p>혼자 있는 시간을 즐기는 편인가요?</p>
+                <label><input type="radio" name="sec2" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec2" value="4"> 동의</label>
+                <label><input type="radio" name="sec2" value="3"> 중립</label>
+                <label><input type="radio" name="sec2" value="2"> 비동의</label>
+                <label><input type="radio" name="sec2" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 3</legend>
+                <p>다른 사람들과의 대화보다는 개인적인 활동이 더 편안한 편인가요? </p>
+                <label><input type="radio" name="sec3" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec3" value="4"> 동의</label>
+                <label><input type="radio" name="sec3" value="3"> 중립</label>
+                <label><input type="radio" name="sec3" value="2"> 비동의</label>
+                <label><input type="radio" name="sec3" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 4</legend>
+                <p>사람들과의 대화에서 주로 듣는 쪽이 아닌 이야기하는 편인가요? </p>
+                <label><input type="radio" name="sec4" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec4" value="4"> 동의</label>
+                <label><input type="radio" name="sec4" value="3"> 중립</label>
+                <label><input type="radio" name="sec4" value="2"> 비동의</label>
+                <label><input type="radio" name="sec4" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 5</legend>
+                <p>친한 친구들과의 소규모 모임을 즐기는 편인가요? </p>
+                <label><input type="radio" name="sec5" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec5" value="4"> 동의</label>
+                <label><input type="radio" name="sec5" value="3"> 중립</label>
+                <label><input type="radio" name="sec5" value="2"> 비동의</label>
+                <label><input type="radio" name="sec5" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 6</legend>
+                <p>새로운 사람들과의 대화보다는 익숙한 사람들과 대화하는 편인가요?</p>
+                <label><input type="radio" name="sec6" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec6" value="4"> 동의</label>
+                <label><input type="radio" name="sec6" value="3"> 중립</label>
+                <label><input type="radio" name="sec6" value="2"> 비동의</label>
+                <label><input type="radio" name="sec6" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 7</legend>
+                <p>활동적인 사람들과 시간을 보내는 것을 선호하나요? </p>
+                <label><input type="radio" name="sec7" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec7" value="4"> 동의</label>
+                <label><input type="radio" name="sec7" value="3"> 중립</label>
+                <label><input type="radio" name="sec7" value="2"> 비동의</label>
+                <label><input type="radio" name="sec7" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 8</legend>
+                <p>혼자 있을 때 자신의 생각에 깊이 몰두하는 편인가요? </p>
+                <label><input type="radio" name="sec8" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec8" value="4"> 동의</label>
+                <label><input type="radio" name="sec8" value="3"> 중립</label>
+                <label><input type="radio" name="sec8" value="2"> 비동의</label>
+                <label><input type="radio" name="sec8" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 9</legend>
+                <p>친구들과의 대화가 주는 에너지보다는 혼자 있는 시간이 더 즐거운 편인가요?</p>
+                <label><input type="radio" name="sec9" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec9" value="4"> 동의</label>
+                <label><input type="radio" name="sec9" value="3"> 중립</label>
+                <label><input type="radio" name="sec9" value="2"> 비동의</label>
+                <label><input type="radio" name="sec9" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 10</legend>
+                <p>소수의 친한 친구들과 지낼 때 더 편안한 편인가요?</p>
+                <label><input type="radio" name="sec10" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec10" value="4"> 동의</label>
+                <label><input type="radio" name="sec10" value="3"> 중립</label>
+                <label><input type="radio" name="sec10" value="2"> 비동의</label>
+                <label><input type="radio" name="sec10" value="1"> 매우비동의</label>
+            </fieldset>
+
+
+            {% comment %}  {% endcomment %}
+            <fieldset>
+                <legend>항목 11</legend>
+                <p> 주로 감정보다 논리와 사실에 의존하여 결정을 내리는 편인가요? </p>
+                <label><input type="radio" name="sec11" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec11" value="4"> 동의</label>
+                <label><input type="radio" name="sec11" value="3"> 중립</label>
+                <label><input type="radio" name="sec11" value="2"> 비동의</label>
+                <label><input type="radio" name="sec11" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 12</legend>
+                <p>자신의 감정을 표현하는 것이 어려운 편인가요? </p>
+                <label><input type="radio" name="sec12" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec12" value="4"> 동의</label>
+                <label><input type="radio" name="sec12" value="3"> 중립</label>
+                <label><input type="radio" name="sec12" value="2"> 비동의</label>
+                <label><input type="radio" name="sec12" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 13</legend>
+                <p>직관적으로 느끼는 감정보다는 분석과 판단을 우선시하는 편인가요? </p>
+                <label><input type="radio" name="sec13" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec13" value="4"> 동의</label>
+                <label><input type="radio" name="sec13" value="3"> 중립</label>
+                <label><input type="radio" name="sec13" value="2"> 비동의</label>
+                <label><input type="radio" name="sec13" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 14</legend>
+                <p>논리적인 사고보다는 직관과 감정을 중요시하는 편인가요? </p>
+                <label><input type="radio" name="sec14" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec14" value="4"> 동의</label>
+                <label><input type="radio" name="sec14" value="3"> 중립</label>
+                <label><input type="radio" name="sec14" value="2"> 비동의</label>
+                <label><input type="radio" name="sec14" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 15</legend>
+                <p>감정적인 상황에서도 논리적인 판단을 유지하는 편인가요? </p>
+                <label><input type="radio" name="sec15" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec15" value="4"> 동의</label>
+                <label><input type="radio" name="sec15" value="3"> 중립</label>
+                <label><input type="radio" name="sec15" value="2"> 비동의</label>
+                <label><input type="radio" name="sec15" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 16</legend>
+                <p>문제 해결에 있어서 감정적인 영향을 최소화하고 논리적인 판단을 선호하는 편인가요? </p>
+                <label><input type="radio" name="sec16" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec16" value="4"> 동의</label>
+                <label><input type="radio" name="sec16" value="3"> 중립</label>
+                <label><input type="radio" name="sec16" value="2"> 비동의</label>
+                <label><input type="radio" name="sec16" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 17</legend>
+                <p>감정의 영향을 받지 않고 논리적으로 판단하는 편인가요? </p>
+                <label><input type="radio" name="sec17" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec17" value="4"> 동의</label>
+                <label><input type="radio" name="sec17" value="3"> 중립</label>
+                <label><input type="radio" name="sec17" value="2"> 비동의</label>
+                <label><input type="radio" name="sec17" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 18</legend>
+                <p>감정보다는 사실과 데이터를 기반으로 결정하는 편인가요? </p>
+                <label><input type="radio" name="sec18" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec18" value="4"> 동의</label>
+                <label><input type="radio" name="sec18" value="3"> 중립</label>
+                <label><input type="radio" name="sec18" value="2"> 비동의</label>
+                <label><input type="radio" name="sec18" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 19</legend>
+                <p>논리적인 사고와 분석을 통해 문제를 해결하려는 편인가요? </p>
+                <label><input type="radio" name="sec19" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec19" value="4"> 동의</label>
+                <label><input type="radio" name="sec19" value="3"> 중립</label>
+                <label><input type="radio" name="sec19" value="2"> 비동의</label>
+                <label><input type="radio" name="sec19" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 20</legend>
+                <p>타인의 감정보다는 논리적인 근거에 따라 판단하는 편인가요? </p>
+                <label><input type="radio" name="sec20" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec20" value="4"> 동의</label>
+                <label><input type="radio" name="sec20" value="3"> 중립</label>
+                <label><input type="radio" name="sec20" value="2"> 비동의</label>
+                <label><input type="radio" name="sec20" value="1"> 매우비동의</label>
+            </fieldset>
+
+            {% comment %}     {% endcomment %}
+
+
+            <fieldset>
+                <legend>항목 21</legend>
+                <p>계획을 세우고 일정을 따라가는 것을 좋아하는 편인가요? </p>
+                <label><input type="radio" name="sec21" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec21" value="4"> 동의</label>
+                <label><input type="radio" name="sec21" value="3"> 중립</label>
+                <label><input type="radio" name="sec21" value="2"> 비동의</label>
+                <label><input type="radio" name="sec21" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 22</legend>
+                <p>예상되는 상황을 고려하여 계획을 세우는 편인가요? </p>
+                <label><input type="radio" name="sec22" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec22" value="4"> 동의</label>
+                <label><input type="radio" name="sec22" value="3"> 중립</label>
+                <label><input type="radio" name="sec22" value="2"> 비동의</label>
+                <label><input type="radio" name="sec22" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 23</legend>
+                <p>예기치 않은 일에도 미리 준비해놓은 계획을 따르려는 편인가요? </p>
+                <label><input type="radio" name="sec23" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec23" value="4"> 동의</label>
+                <label><input type="radio" name="sec23" value="3"> 중립</label>
+                <label><input type="radio" name="sec23" value="2"> 비동의</label>
+                <label><input type="radio" name="sec23" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 24</legend>
+                <p>상황이 변해도 빠르게 적응하여 문제를 해결하려는 편인가요? </p>
+
+                <label><input type="radio" name="sec24" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec24" value="4"> 동의</label>
+                <label><input type="radio" name="sec24" value="3"> 중립</label>
+                <label><input type="radio" name="sec24" value="2"> 비동의</label>
+                <label><input type="radio" name="sec24" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 25</legend>
+                <p>융통성 있게 상황에 따라 대처하는 편인가요? </p>
+                <label><input type="radio" name="sec25" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec25" value="4"> 동의</label>
+                <label><input type="radio" name="sec25" value="3"> 중립</label>
+                <label><input type="radio" name="sec25" value="2"> 비동의</label>
+                <label><input type="radio" name="sec25" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 26</legend>
+                <p>계획이나 일정을 중시하는 편인가요? </p>
+                <label><input type="radio" name="sec26" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec26" value="4"> 동의</label>
+                <label><input type="radio" name="sec26" value="3"> 중립</label>
+                <label><input type="radio" name="sec26" value="2"> 비동의</label>
+                <label><input type="radio" name="sec26" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 27</legend>
+                <p>새로운 환경에 빠르게 적응하여 문제를 해결하려는 편인가요? </p>
+                <label><input type="radio" name="sec27" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec27" value="4"> 동의</label>
+                <label><input type="radio" name="sec27" value="3"> 중립</label>
+                <label><input type="radio" name="sec27" value="2"> 비동의</label>
+                <label><input type="radio" name="sec27" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 28</legend>
+                <p>계획을 변경해야 할 때 조직적으로 재조정하는 것을 선호하는 편인가요? </p>
+                <label><input type="radio" name="sec28" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec28" value="4"> 동의</label>
+                <label><input type="radio" name="sec28" value="3"> 중립</label>
+                <label><input type="radio" name="sec28" value="2"> 비동의</label>
+                <label><input type="radio" name="sec28" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 29</legend>
+                <p>계획을 세워놓고 따르는 것을 좋아하나요? </p>
+                <label><input type="radio" name="sec29" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec29" value="4"> 동의</label>
+                <label><input type="radio" name="sec29" value="3"> 중립</label>
+                <label><input type="radio" name="sec29" value="2"> 비동의</label>
+                <label><input type="radio" name="sec29" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 30</legend>
+                <p>새로운 상황에서도 융통성 있게 대처하는 편인가요? </p>
+                <label><input type="radio" name="sec30" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec30" value="4"> 동의</label>
+                <label><input type="radio" name="sec30" value="3"> 중립</label>
+                <label><input type="radio" name="sec30" value="2"> 비동의</label>
+                <label><input type="radio" name="sec30" value="1"> 매우비동의</label>
+            </fieldset>
+
+
+            {% comment %}
+             2. 판단
+            {% endcomment %}
+
+
+
+            <fieldset>
+                <legend>항목 31</legend>
+                <p>다양한 분야에 대한 흥미와 호기심을 가지고 있는 편인가요? </p>
+                <label><input type="radio" name="sec31" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec31" value="4"> 동의</label>
+                <label><input type="radio" name="sec31" value="3"> 중립</label>
+                <label><input type="radio" name="sec31" value="2"> 비동의</label>
+                <label><input type="radio" name="sec31" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 32</legend>
+                <p>다른 사람들과 협력하여 공동 목표를 달성하는 것을 중요하게 여기나요? </p>
+                <label><input type="radio" name="sec32" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec32" value="4"> 동의</label>
+                <label><input type="radio" name="sec32" value="3"> 중립</label>
+                <label><input type="radio" name="sec32" value="2"> 비동의</label>
+                <label><input type="radio" name="sec32" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 33</legend>
+                <p>협력과 조화를 중요하게 생각하며 타인의 의견을 존중하는 편인가요? </p>
+                <label><input type="radio" name="sec33" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec33" value="4"> 동의</label>
+                <label><input type="radio" name="sec33" value="3"> 중립</label>
+                <label><input type="radio" name="sec33" value="2"> 비동의</label>
+                <label><input type="radio" name="sec33" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 34</legend>
+                <p>다른 사람들과의 관계를 통해 더 큰 목표를 달성하려는 편인가요? </p>
+                <label><input type="radio" name="sec34" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec34" value="4"> 동의</label>
+                <label><input type="radio" name="sec34" value="3"> 중립</label>
+                <label><input type="radio" name="sec34" value="2"> 비동의</label>
+                <label><input type="radio" name="sec34" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 35</legend>
+                <p>다른 사람들의 요구와 필요를 배려하여 행동하는 편인가요? </p>
+                <label><input type="radio" name="sec35" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec35" value="4"> 동의</label>
+                <label><input type="radio" name="sec35" value="3"> 중립</label>
+                <label><input type="radio" name="sec35" value="2"> 비동의</label>
+                <label><input type="radio" name="sec35" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 36</legend>
+                <p>개인적인 이익보다는 공동체나 그룹의 이익을 중요하게 여기는 편인가요? </p>
+                <label><input type="radio" name="sec36" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec36" value="4"> 동의</label>
+                <label><input type="radio" name="sec36" value="3"> 중립</label>
+                <label><input type="radio" name="sec36" value="2"> 비동의</label>
+                <label><input type="radio" name="sec36" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 37</legend>
+                <p>타인과의 갈등을 회피하며 협력적인 방법으로 문제를 해결하려는 편인가요? </p>
+                <label><input type="radio" name="sec37" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec37" value="4"> 동의</label>
+                <label><input type="radio" name="sec37" value="3"> 중립</label>
+                <label><input type="radio" name="sec37" value="2"> 비동의</label>
+                <label><input type="radio" name="sec37" value="1"> 매우비동의</label>
+            </fieldset><fieldset>
+                <legend>항목 38</legend>
+                <p>협력을 통해 좋은 결과를 얻는 것을 중요하게 여기나요? </p>
+                <label><input type="radio" name="sec38" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec38" value="4"> 동의</label>
+                <label><input type="radio" name="sec38" value="3"> 중립</label>
+                <label><input type="radio" name="sec38" value="2"> 비동의</label>
+                <label><input type="radio" name="sec38" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 39</legend>
+                <p>다른 사람들과 함께 일하거나 활동하는 것을 즐기는 편인가요? </p>
+                <label><input type="radio" name="sec39" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec39" value="4"> 동의</label>
+                <label><input type="radio" name="sec39" value="3"> 중립</label>
+                <label><input type="radio" name="sec39" value="2"> 비동의</label>
+                <label><input type="radio" name="sec39" value="1"> 매우비동의</label>
+            </fieldset>
+            <fieldset>
+                <legend>항목 40</legend>
+                <p>타인과 협력하여 공동의 목표를 달성하는 것을 중요하게 여기나요? </p>
+                <label><input type="radio" name="sec40" value="5"> 매우동의</label>
+                <label><input type="radio" name="sec40" value="4"> 동의</label>
+                <label><input type="radio" name="sec40" value="3"> 중립</label>
+                <label><input type="radio" name="sec40" value="2"> 비동의</label>
+                <label><input type="radio" name="sec40" value="1"> 매우비동의</label>
+            </fieldset>
+
+            <input type="submit" value="제출">
+        </form>
+    </div>
 
 </body>
-
- 
 
 </html>
